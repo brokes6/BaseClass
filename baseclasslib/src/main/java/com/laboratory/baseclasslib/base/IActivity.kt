@@ -1,4 +1,4 @@
-package com.laboratory.baseclass.base
+package com.laboratory.baseclasslib.base
 
 import android.view.View
 

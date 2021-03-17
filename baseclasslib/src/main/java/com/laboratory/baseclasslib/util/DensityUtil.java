@@ -1,4 +1,4 @@
-package com.laboratory.baseclass.util;
+package com.laboratory.baseclasslib.util;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

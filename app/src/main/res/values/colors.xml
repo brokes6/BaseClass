@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="White">#FFFFFF</color>
-    <color name="Pink">#fa7298</color>
-    <color name="Pink_c8">#c85b7a</color>
-    <color name="Orange">#fed442</color>
-    <color name="Oranges">#f3921f</color>
-    <color name="White_ash">#f4f4f4</color>
-    <color name="Black_alpha_45">#71000000</color>
-    <color name="Black">#000000</color>
-    <color name="Ash">#535353</color>
-    <color name="Text_gray">#a2a2a2</color>
-    <color name="Grey_9">#999999</color>
-    <color name="Black_21">#212121</color>
-    <color name="Grey_6f">#6f6f6f</color>
-    <color name="Grey_white">#ffd8d8d8</color>
-    <color name="Light_Pink">#fddce3</color>
-    <color name="Grey_75">#757575</color>
-    <color name="Font_normal">#555555</color>
-    <color name="Transparent">#00000000</color>
-    <color name="Yellow_30">#FEA501</color>
+
 </resources>
