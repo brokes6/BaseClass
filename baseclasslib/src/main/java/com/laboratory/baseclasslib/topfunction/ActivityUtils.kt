@@ -1,6 +1,7 @@
 package com.laboratory.baseclasslib.util
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Build
 import android.widget.FrameLayout
 
@@ -22,3 +23,13 @@ val Activity.decorView: FrameLayout?
             !isFinishing
         }
     }?.window?.decorView) as? FrameLayout
+
+
+fun Activity.startActivity(className: Class<Activity>) {
+    this.startActivity(Intent(this, className))
+}
+
+fun Activity.startAndFinishActivity(className: Class<Activity>) {
+    this.startActivity(Intent(this, className))
+    this.finish()
+}

@@ -1,14 +1,25 @@
 package com.laboratory.baseclass;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.laboratory.baseclass.databinding.ActivityMainBinding;
+import com.laboratory.baseclasslib.base.BaseSimpleActivity;
+
+import org.jetbrains.annotations.Nullable;
+
+public class MainActivity extends BaseSimpleActivity<ActivityMainBinding> {
+
+    public MainActivity() {
+        super(R.layout.activity_main);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initView(@Nullable Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void initData() {
+
     }
 }

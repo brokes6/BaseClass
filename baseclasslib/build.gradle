@@ -8,12 +8,15 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 200
         versionName "2.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        dataBinding {
+            enabled = true
+        }
     }
 
     buildTypes {
@@ -40,4 +43,8 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // fragment
+    implementation 'androidx.fragment:fragment-ktx:1.2.5'
+    // viewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 }
