@@ -22,7 +22,7 @@ abstract class BaseActivity<VM : BaseViewModel,VB : ViewBinding> :
      */
     lateinit var mViewModel: VM
 
-    lateinit var binding: VB
+    protected abstract val binding: VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
