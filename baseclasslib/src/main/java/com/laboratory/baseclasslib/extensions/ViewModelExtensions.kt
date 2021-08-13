@@ -1,4 +1,4 @@
-package com.laboratory.baseclasslib.topfunction
+package com.laboratory.baseclasslib.extensions
 
 import java.lang.reflect.ParameterizedType
 

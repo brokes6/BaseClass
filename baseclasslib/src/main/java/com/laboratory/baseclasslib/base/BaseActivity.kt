@@ -2,10 +2,9 @@ package com.laboratory.baseclasslib.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
-import com.laboratory.baseclasslib.topfunction.getVmClazz
+import androidx.viewbinding.ViewBinding
+import com.laboratory.baseclasslib.extensions.getVmClazz
 
 /**
  * Author: 付鑫博
@@ -15,25 +14,20 @@ import com.laboratory.baseclasslib.topfunction.getVmClazz
  * Modify:
  * Description:
  */
-abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding>(private val layoutId: Int) :
+abstract class BaseActivity<VM : BaseViewModel,VB : ViewBinding> :
     AppCompatActivity() {
-
-    lateinit var mDataBinding: DB
 
     /**
      * 当前页面绑定的viewModel
      */
     lateinit var mViewModel: VM
 
+    lateinit var binding: VB
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initDataBind()
+        setContentView(binding.root)
         init(savedInstanceState)
-    }
-
-    private fun initDataBind() {
-        mDataBinding = DataBindingUtil.setContentView(this, layoutId)
-        mDataBinding.lifecycleOwner = this
     }
 
     private fun init(savedInstanceState: Bundle?) {

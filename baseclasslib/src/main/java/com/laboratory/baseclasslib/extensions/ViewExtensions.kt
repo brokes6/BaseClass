@@ -1,4 +1,4 @@
-package com.laboratory.baseclasslib.util
+package com.laboratory.baseclasslib.extensions
 
 import android.content.Context
 import android.view.View

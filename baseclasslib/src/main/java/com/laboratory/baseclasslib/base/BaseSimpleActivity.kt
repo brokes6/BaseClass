@@ -2,7 +2,6 @@ package com.laboratory.baseclasslib.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import androidx.viewbinding.ViewBinding
 
 /**
@@ -13,20 +12,15 @@ import androidx.viewbinding.ViewBinding
  * Modify:
  * Description:
  */
-abstract class BaseSimpleActivity<DB : ViewBinding>(private val layoutId: Int) :
+abstract class BaseSimpleActivity<VB : ViewBinding> :
     AppCompatActivity() {
 
-    lateinit var mViewBinding: DB
+    lateinit var binding: VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initDataBind()
+        setContentView(binding.root)
         init(savedInstanceState)
-    }
-
-    private fun initDataBind() {
-        mViewBinding = DataBindingUtil.setContentView(this, layoutId)
-        setContentView(mViewBinding.root)
     }
 
     private fun init(savedInstanceState: Bundle?) {

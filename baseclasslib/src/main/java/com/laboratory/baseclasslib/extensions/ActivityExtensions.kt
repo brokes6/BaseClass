@@ -1,4 +1,4 @@
-package com.laboratory.baseclasslib.util
+package com.laboratory.baseclasslib.extensions
 
 import android.app.Activity
 import android.content.Intent
@@ -25,11 +25,11 @@ val Activity.decorView: FrameLayout?
     }?.window?.decorView) as? FrameLayout
 
 
-fun Activity.startActivity(className: Class<Activity>) {
-    this.startActivity(Intent(this, className))
+inline fun <reified T : Activity> Activity.goActivity() {
+    startActivity(Intent(this, T::class.java))
 }
 
-fun Activity.startAndFinishActivity(className: Class<Activity>) {
-    this.startActivity(Intent(this, className))
-    this.finish()
+inline fun <reified T : Activity> Activity.startAndFinishActivity() {
+    startActivity(Intent(this, T::class.java))
+    finish()
 }
