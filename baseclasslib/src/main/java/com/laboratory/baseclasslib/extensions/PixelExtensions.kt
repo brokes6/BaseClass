@@ -1,6 +1,6 @@
 package com.laboratory.baseclasslib.extensions
 
-import android.content.Context
+import android.content.res.Resources
 
 /**
  * Author: 付鑫博
@@ -10,16 +10,30 @@ import android.content.Context
  * Modify:
  * Description:
  */
-fun Int.dp(context: Context, pxVal: Float): Float {
-    val scale: Float = context.resources.displayMetrics.density
-    return pxVal / scale
-}
+val Int.dp: Int
+    get() = android.util.TypedValue.applyDimension(
+        android.util.TypedValue.COMPLEX_UNIT_DIP,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    ).toInt()
 
-fun Int.sp(context: Context, pxVal: Float): Float {
-    return (pxVal / context.resources.displayMetrics.scaledDensity)
-}
+val Int.sp: Int
+    get() = android.util.TypedValue.applyDimension(
+        android.util.TypedValue.COMPLEX_UNIT_SP,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    ).toInt()
 
-fun Int.dpToPx(context: Context, dpValue: Float): Float {
-    val scale = context.resources.displayMetrics.density
-    return ((dpValue * scale + 0.5f).toInt()).toFloat()
-}
+val Int.px: Int
+    get() = android.util.TypedValue.applyDimension(
+        android.util.TypedValue.COMPLEX_UNIT_PX,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    ).toInt()
+
+val Int.pxf: Float
+    get() = android.util.TypedValue.applyDimension(
+        android.util.TypedValue.COMPLEX_UNIT_PX,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    )

@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.widget.FrameLayout
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 
 /**
  * Author: 付鑫博
@@ -32,4 +34,8 @@ inline fun <reified T : Activity> Activity.goActivity() {
 inline fun <reified T : Activity> Activity.startAndFinishActivity() {
     startActivity(Intent(this, T::class.java))
     finish()
+}
+
+fun Activity.getColor(@ColorRes colorId: Int): Int {
+    return ContextCompat.getColor(this, colorId)
 }

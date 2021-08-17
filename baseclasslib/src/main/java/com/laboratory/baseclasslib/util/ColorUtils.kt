@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.text.TextUtils
 
 /**
- * Author: 陈勇
+ * Author: xx
  * Version: 1.0
  * Date: 2020/10/27
  * Mender:
