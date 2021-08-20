@@ -8,16 +8,16 @@ import android.text.TextUtils
 
 /**
  * Author: 付鑫博
- * Version: 1.13.0
  * Date: 2021/7/26
- * Mender:
- * Modify:
  * Description: 剪切板读写工具
  */
 object ClipBoardUtils {
 
     /**
      * 获取剪切板内容
+     *
+     * @param context 上下文
+     * @return 获取到的剪切板第一条内容
      */
     fun getClipboardData(context: Context): String? {
         val manager: ClipboardManager? = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
@@ -33,6 +33,11 @@ object ClipBoardUtils {
         return null
     }
 
+    /**
+     * 清除剪切板
+     *
+     * @param context 上下文
+     */
     fun clearClipboard(context: Context) {
         val manager: ClipboardManager? = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
         manager?.let {

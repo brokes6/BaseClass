@@ -2,13 +2,9 @@ package com.laboratory.baseclasslib.extensions
 
 import android.content.res.Resources
 
+
 /**
- * Author: 付鑫博
- * Version: 1.14.0
- * Date: 2021/8/9
- * Mender:
- * Modify:
- * Description:
+ * 将数字转换为dp
  */
 val Int.dp: Int
     get() = android.util.TypedValue.applyDimension(
@@ -17,6 +13,9 @@ val Int.dp: Int
         Resources.getSystem().displayMetrics
     ).toInt()
 
+/**
+ * 将数字转换为sp
+ */
 val Int.sp: Int
     get() = android.util.TypedValue.applyDimension(
         android.util.TypedValue.COMPLEX_UNIT_SP,
@@ -24,6 +23,9 @@ val Int.sp: Int
         Resources.getSystem().displayMetrics
     ).toInt()
 
+/**
+ * 将数字转换为px
+ */
 val Int.px: Int
     get() = android.util.TypedValue.applyDimension(
         android.util.TypedValue.COMPLEX_UNIT_PX,

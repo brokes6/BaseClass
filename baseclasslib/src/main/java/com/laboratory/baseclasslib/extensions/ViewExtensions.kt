@@ -6,10 +6,7 @@ import android.view.ViewGroup
 
 /**
  * Author: 付鑫博
- * Version: 1.14.0
  * Date: 2021/8/9
- * Mender:
- * Modify:
  * Description:
  */
 
@@ -30,6 +27,9 @@ fun View.setMargins(l: Int, t: Int, r: Int, b: Int) {
 inline fun Context.View(init: View.() -> Unit) =
     View(this).apply(init)
 
+/**
+ * 内联函数，设置View ID
+ */
 inline var View.layout_id: String
     get() {
         return ""
@@ -37,6 +37,7 @@ inline var View.layout_id: String
     set(value) {
         id = value.toLayoutId()
     }
+
 inline var View.layout_width: Int
     get() {
         return 0
