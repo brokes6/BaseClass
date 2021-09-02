@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollRecyclerView">
+        <attr name="scrollColor" format="color|integer" />
+        <attr name="isShow" format="boolean" />
+        <attr name="showTime" format="integer" />
+    </declare-styleable>
+</resources>

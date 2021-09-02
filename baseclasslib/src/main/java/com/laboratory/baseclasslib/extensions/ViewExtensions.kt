@@ -24,6 +24,14 @@ fun View.setMargins(l: Int, t: Int, r: Int, b: Int) {
     }
 }
 
+fun View.toGONE() {
+    this.visibility = View.GONE
+}
+
+fun View.toVISIBLE() {
+    this.visibility = View.VISIBLE
+}
+
 inline fun Context.View(init: View.() -> Unit) =
     View(this).apply(init)
 

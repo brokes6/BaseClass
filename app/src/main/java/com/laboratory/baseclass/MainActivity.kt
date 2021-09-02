@@ -3,6 +3,7 @@ package com.laboratory.baseclass
 import android.os.Bundle
 import com.laboratory.baseclass.databinding.ActivityMainBinding
 import com.laboratory.baseclasslib.base.BaseSimpleActivity
+import com.laboratory.baseclasslib.extensions.toGONE
 
 /**
  * Author: 付鑫博
